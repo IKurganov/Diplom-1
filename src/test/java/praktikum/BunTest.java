@@ -7,13 +7,13 @@ public class BunTest {
     Bun bun;
 
     @Test
-    public void testGetName() {
+    public void checkGetNameReturnsCorrectNameOfBun() {
         bun = new Bun("black bun", 100);
         Assert.assertEquals("black bun", bun.getName());
     }
 
     @Test
-    public void testGetPrice() {
+    public void checkGetPriceReturnsCorrectPriceOfBun() {
         bun = new Bun("black bun", 100);
         Assert.assertEquals(100, bun.getPrice(), 0);
     }

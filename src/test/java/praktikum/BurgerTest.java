@@ -16,7 +16,7 @@ public class BurgerTest {
     Ingredient ingredient;
 
     @Test
-    public void getPriceWithIngredients() {
+    public void checkGetPriceReturnsCorrectPriceOfBurgerWithIngredients() {
         Burger burger = new Burger();
         burger.setBuns(bun);
         Mockito.when(bun.getPrice()).thenReturn(20f);
@@ -27,7 +27,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void getPriceWithoutIngredients() {
+    public void checkGetPriceReturnsCorrectPriceOfBurgerWithoutIngredients() {
         Burger burger = new Burger();
         burger.setBuns(bun);
         Mockito.when(bun.getPrice()).thenReturn(20f);
