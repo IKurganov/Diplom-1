@@ -38,4 +38,14 @@ public class BurgerTest {
         float price = burger.getPrice();
         Assert.assertEquals(140f, price, 0);
     }
+
+    @Test
+    public void checkGetPriceReturnsCorrectPriceOfBurgerWithDatabaseValues() {
+        Burger burger = new Burger();
+        Database database = new Database();
+        burger.setBuns(database.availableBuns().get(0));
+        burger.addIngredient(database.availableIngredients().get(1));
+        float price = burger.getPrice();
+        Assert.assertEquals(400f, price, 0);
+    }
 }
